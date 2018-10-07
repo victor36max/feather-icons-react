@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 // for now this icons json is generated via the build script from latest feather
@@ -14,9 +14,9 @@ class IconInner extends PureComponent {
     const iconMarkup = icons[icon];
 
     return (iconMarkup && (
-      <g>
+      <Fragment>
         { ReactHtmlParser(iconMarkup) }
-      </g>
+      </Fragment>
     ));
   }
 }
